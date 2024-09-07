@@ -1,0 +1,3 @@
+# .gitignore for Bsa8a project
+*.o
+Build/
