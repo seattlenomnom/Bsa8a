@@ -20,7 +20,7 @@ _togglecase:
 _write:
     MOV R7, #4                          @ write syscall number
     MOV R0, #1                          @ stdout is the screen
-    MOV R2, #1                          @ string is 1 char long
+    MOV R2, #2                          @ string is 2 char long, with \n
     LDR R1, =string                     @ string at string:
     SWI 0
 
@@ -29,4 +29,4 @@ _exit:
     SWI 0
 
 .data
-string:     .ascii " "
+string:     .ascii " \n"
